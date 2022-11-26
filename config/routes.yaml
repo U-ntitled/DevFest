@@ -1,3 +1,8 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+app_projetct:
+    path: /project
+    controller: App\Controller\ProjectController::index
+
