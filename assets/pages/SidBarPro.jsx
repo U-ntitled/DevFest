@@ -75,7 +75,7 @@ const SidebarC = () => {
             />
             <Item
               title="Events"
-              to="/Myaccount/0000/event"
+              to="/actu/Myaccount/0000/event"
               icon={<EventAvailableSharp/>}
               selected={selected}
               setSelected={setSelected}
