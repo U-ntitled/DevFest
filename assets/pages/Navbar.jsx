@@ -103,7 +103,7 @@ const Navbar = () => {
                 </Button>
                 <Button 
                     component={Link} 
-                    to='/SignUp' 
+                    to='/Signup' 
                     type='text'
                     sx={{color:'#000'}}
                     >
