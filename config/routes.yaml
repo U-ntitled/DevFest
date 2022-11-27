@@ -3,6 +3,6 @@ controllers:
     type: attribute
 
 app_projetct:
-    path: /project
+    path: /project/{id}
     controller: App\Controller\ProjectController::index
 

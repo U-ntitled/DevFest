@@ -41,12 +41,6 @@ class Personnel
     #[ORM\Column(type: Types::TEXT)]
     private ?string $sexe = null;
 
-    #[ORM\Column(length: 2, nullable: true)]
-    private ?string $genre = null;
-
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $dob = null;
-
     #[ORM\Column(length: 20)]
     private ?string $tel = null;
 
@@ -179,30 +173,6 @@ class Personnel
     public function setSexe(string $sexe): self
     {
         $this->sexe = $sexe;
-
-        return $this;
-    }
-
-    public function getGenre(): ?string
-    {
-        return $this->genre;
-    }
-
-    public function setGenre(string $genre): self
-    {
-        $this->genre = $genre;
-
-        return $this;
-    }
-
-    public function getDob(): ?\DateTimeInterface
-    {
-        return $this->dob;
-    }
-
-    public function setDob(\DateTimeInterface $dob): self
-    {
-        $this->dob = $dob;
 
         return $this;
     }
