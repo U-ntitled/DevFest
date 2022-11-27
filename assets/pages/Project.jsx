@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import {keyframes}from 'styled-components'
-import network from './../img/Network.svg'
+import network from './../img/network.svg'
 import link from './../img/link.svg'
 import share from './../img/share.svg'
 import  Volunteer from './../img/Volunteer.svg'

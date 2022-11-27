@@ -90,23 +90,6 @@ const Navbar = () => {
                       </Link>
                 </Stack>
                 <Box display='flex'gap='12px'position='relative'>
-                <Button 
-                     startIcon={<LoginOutlined/>} 
-                     component={Link} 
-                     to='/login' 
-                     type='text'
-                     sx={{color:'#000'}}
-                >
-                   LOGIN
-                </Button>
-                <Button 
-                    component={Link} 
-                    to='/SignUp' 
-                    type='text'
-                    sx={{color:'#000'}}
-                    >
-                   SIGN UP
-                </Button>
                 <AvatarContainer>
                     <Avatar src="/broken-image.jpg" />
                     {open ? (
@@ -138,13 +121,13 @@ const Navbar = () => {
                 >   
                   <MenuItem>
                       <AccountBoxOutlined/>
-                           <Link to='/MyAccount/0000'>My Account</Link>
+                           <Link to='/actu/MyAccount/0000'>My Account</Link>
                   </MenuItem>
                   <Divider sx={{ my: 0.5 }} /> 
                     
                     <MenuItem>
                         <DashboardCustomizeOutlined/>
-                        <Link to='/dashboard/0000'>Dashboard</Link>
+                        <Link to='/actu/dashboard/0000'>Dashboard</Link>
                     </MenuItem>
                     <Divider sx={{ my: 0.5 }} /> 
                     <MenuItem>

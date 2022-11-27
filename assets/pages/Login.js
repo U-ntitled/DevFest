@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Layout from "../components/Layout";
 import '../styles/Login.css';
@@ -7,7 +8,6 @@ import { Form, Link, Navigate, redirect, Redirect } from "react-router-dom";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
-import axios from 'axios';
 import Environement from '../img/28900-animated-globe-floating.gif'
 import LOGO from '../img/LOGO.svg';
 import { async } from 'regenerator-runtime';

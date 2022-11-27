@@ -1,4 +1,10 @@
-import { Stack } from '@mui/material'
+import { Stack } from "@mui/material";
+
+import { Outlet } from "react-router-dom";
+import About from "./About";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+
 import React from 'react'
 import AboutCard from './AboutCard'
 import SolidarityIcon from  './../img/preview 1.svg'
@@ -23,25 +29,35 @@ const descriptions = [
 
 ]
 
+const SectionAbout = () =>{
+    return(
 
-const About = () => {
-  return (
-     <Stack 
-         direction='row' 
-         gap={4}
-         m={6}
-         flexWrap='nowrap'
-        sx={{width:'75%', m:'0 auto' ,height:'auto'}}
-     >
-         {descriptions.map(item =>(
-               <AboutCard image={item.image} description={item.description}/>
-         ))}
-           
-           
-     </Stack>
+         <>
+         
+            <Navbar/>
 
-      
-  )
+                <Stack 
+                    direction='row' 
+                    gap={4}
+                    m={6}
+                    flexWrap='nowrap'
+                    sx={{width:'75%', m:'0 auto' ,height:'50vh'}}
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    {descriptions.map(item =>(
+                        <AboutCard image={item.image} description={item.description}/>
+                    ))}
+                    
+                    
+                </Stack>
+
+
+            <Footer/>
+
+         </>
+       
+           
+    )
 }
-
-export default About
+export default SectionAbout

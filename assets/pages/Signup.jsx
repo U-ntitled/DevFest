@@ -1,38 +1,21 @@
-import React from 'react'
 import { Box, Button, TextField, Stack,FormControl,InputLabel,Select,MenuItem } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
 import ENV from "./../img/21912-nature-scene.gif"
 import "./../styles/sn.css"
 import LOGO from "./../img/LOGO.svg"
+import React from 'react';
 import axios from 'axios';
 
 const Form = () => {
   const handleFormSubmit = (values) => {
-      axios
-         .get('/api/verif')
-         .then(function(response)
-          {
-              let users = response.data;
-              for(let user of users) {
-                  if(user.username == values.address1 || values.address2.length < 8 || user.email == values.email || user.tel == values.contact){
-                      alert('yup')
-                      break
-                  }
-                  else{
-                      alert('efa mande')
-                  }
-              }
-          }
-         )
-      // alert('Coucou' + username);
-    };
-  // };
+    console.log(values);
+  };
   const handleOnClick = () =>{
-    
+    console.log('ato no asinlisanycode igetena anle checkbox sy liste deroulant')
   }
   return (
-    <Box>
+    <>
     <Box id="logo" margin="auto">
         <img src={LOGO} alt="" />
     </Box>
@@ -55,7 +38,6 @@ const Form = () => {
             errors,
             touched,
             handleBlur,
-            name,
             handleChange,
             handleSubmit,
           }) => (
@@ -98,23 +80,7 @@ const Form = () => {
                   fullWidth
                   variant="outlined"
                   type="text"
-                  label="Username"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  value={values.address1}
-                  name="address1"
-                  error={!!touched.address1 && !!errors.address1}
-                  helperText={touched.address1 && errors.address1}
-                  sx={{ gridColumn: "span 4" }}
-                />
-
-                <TextField
-                
-            
-                  fullWidth
-                  variant="outlined"
-                  type="text"
-                  label="Phone number"
+                  label="Contact Number"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.contact}
@@ -129,13 +95,13 @@ const Form = () => {
                   fullWidth
                   variant="outlined"
                   type="text"
-                  label="Email"
+                  label="Address 1"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={values.email}
-                  name="email"
-                  error={!!touched.email && !!errors.email}
-                  helperText={touched.email && errors.email}
+                  value={values.address1}
+                  name="address1"
+                  error={!!touched.address1 && !!errors.address1}
+                  helperText={touched.address1 && errors.address1}
                   sx={{ gridColumn: "span 4" }}
                 />
                 <TextField
@@ -188,7 +154,7 @@ const Form = () => {
           </Box>
       </Box>
   </Box>
-    </Box>
+    </>
   );
 };
 

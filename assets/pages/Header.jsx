@@ -49,9 +49,9 @@ const Header = () => {
                   variant='body1' 
                   sx={{width:'75%',p:'12px'}}
               >
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus 
-                 labore similique ad rem non assumenda laborum officia, id corrupti sint 
-                 consequatur necessitatibus illo sit! Sed non quia quasi dolore exercitationem.
+                 We are an Environmental protection associations that take part in the action of public bodies concerning the environment. We participate in the following national and regional 
+                consultative bodies  to examine environmental and sustainable development policies.
+
 
               </Typography>
               <StyledButton 

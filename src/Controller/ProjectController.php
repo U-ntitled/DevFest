@@ -54,6 +54,7 @@ class ProjectController extends AbstractController
             ];
             // return $this->json($datas);
         }
+        
         return $this->json($datas);
         // return $this->render('spa/index.html.twig', [
         //     'name' => $this->json($datas),
@@ -61,30 +62,6 @@ class ProjectController extends AbstractController
 
     }
 
-
-
-    #[Route('/api/signUp', name: 'app')]
-    public function signup(ManagerRegistry $doctrine, Request $request){
-        $manager = $doctrine->getManager();
-
-        $user = new Personnel();
-        $user->setEmail($request->request->get('email'));
-        $user->setNomPersonne($request->request->get('nom'));
-        $user->setPrenomPersonne($request->request->get('prenom'));
-        $user->setFonction($request->request->get('fonction'));
-        $user->setSexe($request->request->get('sexe'));
-        $user->setProfilUrl($request->request->get('profil'));
-        $user->setPassword($request->request->get('password'));
-        $user->setIdOrg($request->request->get('idOrg'));
-        $user->setTel($request->request->get('tel'));
-        $user->setUsername($request->request->get('username'));
-        $manager->persist($user);
-        $manager->flush();
-
-
-        return $this->json(['status' => 'ok']);
-        
-    }
 
     
 
