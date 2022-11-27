@@ -54,7 +54,7 @@ const SidebarC = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"} sx={{mt:3}}>
             <Item
               title="Porfile"
-              to="/Myaccount/0000/profil"
+              to="/actu/Myaccount/0000/profil"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
