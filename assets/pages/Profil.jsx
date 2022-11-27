@@ -10,7 +10,7 @@ const Profil = () => {
                     <Typography variant='h4' sx={{color:'#D9AD2B'}}>
                             USERNAME
                     </Typography>
-                    <Link href='/Myaccount/0000/edit'>
+                    <Link href='/actu/Myaccount/0000/edit'>
                         <Typography variant='title1'sx={{p:1, color:'blue'}}>
                                 
                                 <span style={{marginRight:2}}>Edit</span>
